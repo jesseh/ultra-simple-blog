@@ -8,14 +8,15 @@ if [[ ! `ls settings.py` ]]; then
     exit 1
 fi
 
-ln -i -s $VIRTUAL_ENV/src/django-tip/django 
-ln -i -s $VIRTUAL_ENV/src/djangotoolbox-tip/djangotoolbox 
-ln -i -s $VIRTUAL_ENV/src/django-autoload-tip/autoload
-ln -i -s $VIRTUAL_ENV/src/django-dbindexer-tip/dbindexer
-ln -i -s $VIRTUAL_ENV/src/djangoappengine-tip djangoappengine
+ln -f -s `pwd`/static site_media/
+ln -f -s $VIRTUAL_ENV/src/django-tip/django 
+ln -f -s $VIRTUAL_ENV/src/djangotoolbox-tip/djangotoolbox 
+ln -f -s $VIRTUAL_ENV/src/django-autoload-tip/autoload
+ln -f -s $VIRTUAL_ENV/src/django-dbindexer-tip/dbindexer
+ln -f -s $VIRTUAL_ENV/src/djangoappengine-tip djangoappengine
 echo "---"
 echo "Here are the results:"
-find . -type l -maxdepth 1 | xargs ls -l
+find . -type l | xargs ls -l
 echo 
 echo "---"
 echo "Here are the symbolic links to be git ignored:"

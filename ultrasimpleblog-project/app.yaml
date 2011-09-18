@@ -17,6 +17,16 @@ handlers:
 - url: /_ah/stats/.*
   script: djangoappengine/appstats/ui.py
 
+# @@@ avoids using staticfiles collector. 
+- url: /site_media
+  static_dir: site_media
+  expiration: '0'
+
+- url: /favicon.ico
+  static_files: static/server/favicon.ico
+  upload: static/server/favicon.ico
+  expiration: '10d'
+
 - url: /media/admin
   static_dir: django/contrib/admin/media
   expiration: '0'

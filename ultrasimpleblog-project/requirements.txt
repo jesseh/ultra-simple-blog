@@ -5,4 +5,3 @@ mercurial==1.9.1
 -e hg+https://bitbucket.org/wkornewald/djangoappengine#egg=djangoappengine-tip
 -e hg+https://bitbucket.org/wkornewald/djangotoolbox#egg=djangotoolbox-tip
 wsgiref==0.1.2
-PIL==1.1.7

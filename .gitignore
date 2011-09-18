@@ -1,17 +1,13 @@
-.tmp_commit_msg
-ultrasimpleblog_project/local_settings.py
-*~
-*~~
-*.DS_Store
-.*.sw?
-.sw?
-.gaedata
-todo.txt
-*Session.vim
 
+# Symlinks to installed apps. Use scripts/create_symlinks.sh to create the links.
 autoload
 dbindexer
 django
 djangoappengine
 djangotoolbox
 
+# Other project specific ignores
+todo.txt
+ultrasimpleblog_project/local_settings.py
+.gaedata
+site_media
