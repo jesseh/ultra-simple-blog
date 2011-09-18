@@ -47,7 +47,7 @@ STATIC_URL = "/site_media/static/"
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = posixpath.join(STATIC_URL, "admin/")
+ADMIN_MEDIA_PREFIX = "/site_media/admin/"
 
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "templates"),
@@ -65,7 +65,7 @@ DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
 AUTOLOAD_SITECONF = 'indexes'
 
 INSTALLED_APPS = (
-#    'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',

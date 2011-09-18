@@ -17,7 +17,7 @@ handlers:
 - url: /_ah/stats/.*
   script: djangoappengine/appstats/ui.py
 
-# @@@ avoids using staticfiles collector. 
+# @@@ avoids using staticfiles collector. Instead symlinks must be created in site_media
 - url: /site_media
   static_dir: site_media
   expiration: '0'
@@ -26,10 +26,6 @@ handlers:
   static_files: static/server/favicon.ico
   upload: static/server/favicon.ico
   expiration: '10d'
-
-- url: /media/admin
-  static_dir: django/contrib/admin/media
-  expiration: '0'
 
 - url: /.*
   script: djangoappengine/main/main.py

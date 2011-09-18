@@ -7,13 +7,19 @@ if [[ ! `ls settings.py` ]]; then
     echo "You must be in the base directory of the project (where settings.py sits)."
     exit 1
 fi
+here = `pwd`
 
-ln -f -s `pwd`/static site_media/
+echo
+echo "Linking installed apps:"
 ln -f -s $VIRTUAL_ENV/src/django-tip/django 
 ln -f -s $VIRTUAL_ENV/src/djangotoolbox-tip/djangotoolbox 
 ln -f -s $VIRTUAL_ENV/src/django-autoload-tip/autoload
 ln -f -s $VIRTUAL_ENV/src/django-dbindexer-tip/dbindexer
 ln -f -s $VIRTUAL_ENV/src/djangoappengine-tip djangoappengine
+echo
+echo "Linking static media:"
+ln -f -s $here/static site_media/
+ln -f -s $VIRTUAL_ENV/src/django-tip/django/contrib/admin/media site_media/admin
 echo "---"
 echo "Here are the results:"
 find . -type l | xargs ls -l
