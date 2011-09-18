@@ -10,7 +10,7 @@ DATABASES['native'] = DATABASES['default']
 DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
 AUTOLOAD_SITECONF = 'indexes'
 
-SECRET_KEY = '=r-$b*8hglm+858&9t043hlm6-&6-3d3vfc4((7yd0dbrakhvi'
+SECRET_KEY = '=r-$aldkasdf9aa0J(*N*dfjamva0*&djakdf0(*HG^<S-F7Yn'
 
 INSTALLED_APPS = (
 #    'django.contrib.admin',
