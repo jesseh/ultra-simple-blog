@@ -1,0 +1,17 @@
+.tmp_commit_msg
+ultrasimpleblog_project/local_settings.py
+*~
+*~~
+*.DS_Store
+.*.sw?
+.sw?
+.gaedata
+todo.txt
+*Session.vim
+
+autoload
+dbindexer
+django
+djangoappengine
+djangotoolbox
+
