@@ -69,9 +69,14 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
+
+    #external apps
     'djangotoolbox',
     'autoload',
     'dbindexer',
+
+    #internal apps - non-reusable apps are in one directory.
+    'apps.blog',
 
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
