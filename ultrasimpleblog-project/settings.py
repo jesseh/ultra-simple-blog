@@ -49,6 +49,8 @@ STATIC_URL = "/site_media/static/"
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = "/site_media/admin/"
 
+LOGIN_REDIRECT_URL = "/"
+
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "templates"),
 ]

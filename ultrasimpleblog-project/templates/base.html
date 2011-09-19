@@ -25,12 +25,15 @@
   <body>
     <div id="header">
         <h1><a id="logo" href="/">Ultra Simple Blog</a></h1>
-      {% if request.user %}
       <div class="controls">
+      {% if request.user.is_authenticated %}
       Goto: <a href="{% url article_unpublished_index %}">Unpublished</a>
       | <a href="{% url article_new %}">New</a>
-      </div>
+      | <a href="{% url logout %}">Logout</a>
+      {% else %}
+      Goto: <a href="{% url login %}">Login</a>
       {% endif %}
+      </div>
       <hr />
     </div>
 
