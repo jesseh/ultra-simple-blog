@@ -6,7 +6,10 @@
 <div class="article">
     <form action="{{ request.path_info }}" method="post">
         {{ form|as_uni_form }}
-        <input type="submit" value="submit"/>
+        <input type="submit" value="submit"/> 
+        {% if article.slug %}
+        | <a href="{% url article_delete article.slug %}">Delete</a>
+        {% endif %}
     </form>
 </div>
 {% endblock %}
