@@ -5,7 +5,6 @@ from django.core.exceptions import ValidationError
 
 from model_utils.models import TimeStampedModel
 
-# Create your models here.
 class Article(TimeStampedModel):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True) # Unique is ignored in non-rel. Enforced at save.
@@ -17,7 +16,7 @@ class Article(TimeStampedModel):
     def validate_unique(self, *args, **kwargs):
         """
         Directly validate that the slug is unique.
-        @@@ Is this the right way to do a uniqueness check in non-rel?
+        @@@ Is this the right way to do a uniqueness check in nonrel?
         """
         if self.id is None:
             try:
