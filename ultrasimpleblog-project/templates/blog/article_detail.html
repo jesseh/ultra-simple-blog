@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "blog/_article_controls" %}
+<div class="article">
+    <h2 class="article-title">{{ article.title }}</h2>
+    <div class="published">
+        {% if article.published %}
+        Published on: {{ article.published_date }}
+        {% else %}
+        Unpublished
+        {% endif %}
+    </div>
+    <div class="article-body">
+        {{ article.content|linebreaks }}
+    </div>
+</div>
+{% endblock %}

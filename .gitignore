@@ -5,6 +5,8 @@ dbindexer
 django
 djangoappengine
 djangotoolbox
+model_utils
+uni_form
 
 # Other project specific ignores
 todo.txt

@@ -1,0 +1,6 @@
+{% if request.user %}
+<div class="controls">
+    <a href="{% url article_edit article.slug %}">Edit</a>
+    | <a href="{% url article_delete article.slug %}">Delete</a>
+</div>
+{% endif %}

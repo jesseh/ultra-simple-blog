@@ -74,9 +74,12 @@ INSTALLED_APPS = (
     'djangotoolbox',
     'autoload',
     'dbindexer',
+    'model_utils',
+    'uni_form',
 
     #internal apps - non-reusable apps are in one directory.
     'apps.blog',
+    'apps.utils',
 
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',

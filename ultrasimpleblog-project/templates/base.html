@@ -11,6 +11,11 @@
     {% block css %}
     {% endblock %}
 
+    <script src="{{ STATIC_URL }}js/jquery.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}uni_form/uni-form.jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}uni_form/uni-form.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}uni_form/default.uni-form.css" type="text/css" />
+    
     {% block preload_js %}
     {% endblock %}
 
@@ -19,7 +24,14 @@
 
   <body>
     <div id="header">
-      <a id="logo" href="/">Ultra Simple Blog</a>
+        <h1><a id="logo" href="/">Ultra Simple Blog</a></h1>
+      {% if request.user %}
+      <div class="controls">
+      Goto: <a href="{% url article_unpublished_index %}">Unpublished</a>
+      | <a href="{% url article_new %}">New</a>
+      </div>
+      {% endif %}
+      <hr />
     </div>
 
     <div class="columns">

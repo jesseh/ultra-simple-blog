@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{% url article_delete slug=article.slug %}" method="post">
+    Are you sure that you want to delet the article titled '{{ article.title }}'?
+    <input type="submit" value="Yes"/>
+</form>
+{% endblock %}

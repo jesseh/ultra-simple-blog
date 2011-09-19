@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for article in article_list %}
+{% if article.slug %}{# Safeguard because nonrel seems to not enforce blank=False model requirements. #}
+<div class="article">
+    <h2 class="article-title"><a href="{% url article_view article.slug %}">{{ article.title }}</a></h2>
+    <div class="published">
+        {% if article.published %}
+        Published on: {{ article.published_date }}
+        {% else %}
+        Unpublished
+        {% endif %}
+    </div>
+    {% include "blog/_article_controls" %}
+    <div class="article-body">
+        {{ article.content|linebreaks }}
+    </div>
+</div>
+<hr/>
+{% endif %}
+{% endfor %}
+{% if page_obj.paginator.num_pages != 1 %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">newer articles</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">older articles</a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+
+{% endblock %}
