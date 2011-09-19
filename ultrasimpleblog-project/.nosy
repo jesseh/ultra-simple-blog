@@ -1,0 +1,9 @@
+[nosy]
+type=nonrel
+#monitor_paths   (project specific)
+#logging=warning (for the project and associated builder and notifier)
+#check_period    (when ran standalone, i.e. with --local)
+cd_to=~/dev/ultrasimpleblog/ultrasimpleblog-project/
+command=python2.5 ./manage.py
+command_args=--verbosity=1 blog
+
