@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load markup %}
+{% load oembed_tags %}
 
 {% block content %}
 {% include "blog/_article_controls" %}
@@ -14,7 +15,9 @@
         {% endif %}
     </div>
     <div class="article-body">
+        {% oembed %}
         {{ article.content|markdown }}
+        {% endoembed %}
     </div>
 </div>
 <hr/>

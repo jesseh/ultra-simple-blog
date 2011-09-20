@@ -79,6 +79,7 @@ INSTALLED_APPS = (
     'dbindexer',
     'model_utils',
     'uni_form',
+    'oembed',
 
     #internal apps - non-reusable apps are in one directory.
     'apps.blog',
@@ -109,6 +110,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 TEST_RUNNER = 'djangotoolbox.test.CapturingTestSuiteRunner'
 
 ROOT_URLCONF = 'urls'
+
+GAE_SETTINGS_MODULES = (
+    'gae_oembed_settings',
+)
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

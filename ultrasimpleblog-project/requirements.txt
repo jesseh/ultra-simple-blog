@@ -8,3 +8,4 @@ wsgiref==0.1.2
 django-model-utils==1.0.0
 django-uni-form==0.9.0
 Markdown==2.0.3
+-e git+https://github.com/ixc/django-oembed.git@ea8207c2a7742ce52fb5a97cf05208936f496761#egg=django_oembed

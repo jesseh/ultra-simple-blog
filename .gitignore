@@ -7,6 +7,8 @@ djangoappengine
 djangotoolbox
 model_utils
 uni_form
+markdown
+oembed
 
 # Other project specific ignores
 todo.txt

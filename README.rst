@@ -3,6 +3,10 @@ Ultra Simple Blog
 
 This is a test project. I've focused solely on the backend and done almost no work on the front end. In developing this blog I tried to leverage the new class-based views for maximum code efficiency.
 
+The article content may use Markdown syntax. 
+
+Any urls in the article content to videos at places like youtube, viddler and vimeo will be converted into an embedded viewer. See https://github.com/ixc/django-oembed/blob/master/oembed/fixtures/initial_data.json for the list of links that are handled.
+
 Demo
 ----
 The ultra simple blog is running at http://ultrasimpleblog.appspot.com.
