@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load markup %}
+
 {% block content %}
 {% for article in article_list %}
 {% if article.slug %}{# Safeguard because nonrel seems to not enforce blank=False model requirements. #}
@@ -14,7 +16,7 @@
     </div>
     {% include "blog/_article_controls" %}
     <div class="article-body">
-        {{ article.content|linebreaks }}
+        {{ article.content|markdown }}
     </div>
 </div>
 <hr/>

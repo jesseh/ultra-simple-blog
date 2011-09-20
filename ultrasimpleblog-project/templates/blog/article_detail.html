@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load markup %}
+
 {% block content %}
 {% include "blog/_article_controls" %}
 <div class="article">
@@ -12,7 +14,7 @@
         {% endif %}
     </div>
     <div class="article-body">
-        {{ article.content|linebreaks }}
+        {{ article.content|markdown }}
     </div>
 </div>
 <hr/>

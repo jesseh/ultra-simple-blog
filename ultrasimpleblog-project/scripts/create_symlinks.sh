@@ -24,6 +24,7 @@ $make_link $venv_src/django-dbindexer-tip/dbindexer
 $make_link $venv_src/djangoappengine-tip djangoappengine
 $make_link $venv_installed/model_utils
 $make_link $venv_installed/uni_form
+$make_link $venv_installed/markdown
 echo "Linking static media:"
 $make_link $here/static site_media/
 $make_link $venv_src/django-tip/django/contrib/admin/media site_media/admin
