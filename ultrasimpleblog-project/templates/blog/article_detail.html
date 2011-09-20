@@ -16,7 +16,7 @@
     </div>
     <div class="article-body">
         {% oembed %}
-        {{ article.content|markdown }}
+        {{ article.content|markdown:"safe" }}
         {% endoembed %}
     </div>
 </div>
