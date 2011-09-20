@@ -11,7 +11,7 @@ class Article(TimeStampedModel):
     content = models.TextField()
     published = models.BooleanField()
     published_date = models.DateTimeField(blank=True, null=True,
-            help_text="Is set automatically when first published.")
+            help_text="The published date is set automatically when this is first published.")
 
     def validate_unique(self, *args, **kwargs):
         """
